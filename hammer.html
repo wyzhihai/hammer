@@ -20,12 +20,12 @@
 		var hs=new hammer(box);
 		var scale=1;
 		hs.get('pinch').set({enable:true});
-		hs.on('pinout',function(){
+		hs.on('pinchout',function(){
 			if(scale<3)
 				scale+=0.01;
 			box.style.webkitTransform='scale('+scale+')';
 		})
-		hs.on('pinin',function(){
+		hs.on('pinchin',function(){
 			if(scale>0.1)
 				scale-=0.01;
 			box.style.webkitTransform='scale('+scale+')';
