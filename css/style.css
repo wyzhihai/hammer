@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, html body {
+  width: 100%;
+  height: 100%; }
+  html body .container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden; }
+    html body .container .wrapper {
+      width: 400%;
+      height: 100%;
+      display: flex;
+      transition: all 0.5s; }
+      html body .container .wrapper .block {
+        width: 25%;
+        height: 100%; }
+      html body .container .wrapper .block1 {
+        background: red; }
+      html body .container .wrapper .block2 {
+        background: yellow; }
+      html body .container .wrapper .block3 {
+        background: green; }
+      html body .container .wrapper .block4 {
+        background: blue; }
+
+/*# sourceMappingURL=style.css.map */

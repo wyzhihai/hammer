@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/Hammer.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="block block1">11111</div>
+			<div class="block block2">22222</div>
+			<div class="block block3">33333</div>
+			<div class="block block4">44444</div>
+		</div>
+	</div>
+	<script>
+		var cont=document.querySelector('.container');
+		var wrap=document.querySelector('.wrapper');
+		var hs=new Hammer(cont);
+		var index=0;
+		hs.on('swipeleft',function(){
+
+			index++;
+			if(index==4)
+				index=3;
+			console.log(index)
+			wrap.style.webkitTransform=`translate3d(${-index*25}%,0,0)`;
+		})
+		hs.on('swiperight',function(){
+			index--;
+			if(index==-1)
+				index=0;
+			console.log(index)
+			wrap.style.webkitTransform=`translate3d(${-index*25}%,0,0)`;
+		})
+
+	</script>
+</body>
+</html>
